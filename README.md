@@ -8,6 +8,10 @@ This application demonstrates bidirectional communication between __node.js__ an
 
 * The web client displays the current state of the led and when clicked, toggles it on/off and notifies/updates all connected clients.
 
+## Demo Video
+
+[![Arduinode Project Demo](http://img.youtube.com/vi/-ClD1SPW2uQ/0.jpg)](http://youtu.be/-ClD1SPW2uQ)
+
 ## Arduino
 
 Wire up your circuit as in the following photo.
