@@ -1,0 +1,32 @@
+{
+  "name": "Arduinode",
+  "description": "Arduino and node.js demo",
+  "version": "0.0.1",
+  "author": {
+    "name": "Brent Ertz",
+    "email": "brent.ertz@gmail.com",
+    "url": "http://brentertz.com"
+  },
+  "homepage": "https://github.com/brentertz/arduinode",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/arduinode/arduinode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brentertz/arduinode/issues"
+  },
+  "license": "MIT",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "NODE_CONFIG_DIR=./server/config node server/app.js"
+  },
+  "dependencies": {
+    "serialport": "~1.2.5",
+    "express": "~4.1.0",
+    "morgan": "~1.0.0",
+    "socket.io": "~0.9.16",
+    "config": "~0.4.35"
+  },
+  "devDependencies": {},
+  "private": true
+}
