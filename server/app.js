@@ -4,12 +4,14 @@
 
 var express = require('express');
 var http = require('http');
+var socketio = require('socket.io');
 var app = module.exports = express();
 var server = http.createServer(app);
+var sio = socketio.listen(server);
 var logger = require('morgan');
 var config = require('config');
 
-require('./sockets')(server, config);
+require('./arduino')(sio, config);
 
 app.set('env', config.env);
 app.set('port', config.port);
