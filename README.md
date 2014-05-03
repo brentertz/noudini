@@ -19,7 +19,7 @@ toggles it on/off and notifies/updates all connected clients.
 
 Wire up your circuit as in the following photo.
 
-![arduino setup](https://raw.githubusercontent.com/brentertz/noudini/master/arduino.jpg)
+* ![photo](https://raw.githubusercontent.com/brentertz/noudini/master/photo.jpg)
 
 _Note: You may use other pins if you like.  Just be sure to update
 `server/config/defaults.js` respectively._
