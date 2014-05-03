@@ -17,9 +17,12 @@ toggles it on/off and notifies/updates all connected clients.
 
 ## Arduino
 
-Wire up your circuit as in the following photo.
+Wire up your circuit as shown in the following images.
 
-* ![photo](https://raw.githubusercontent.com/brentertz/noudini/master/photo.jpg)
+![photo](https://raw.githubusercontent.com/brentertz/noudini/master/photo.jpg)
+![breadboard](https://raw.githubusercontent.com/brentertz/noudini/master/breadboard.png)
+
+_Be sure to check out the included Fritzing project file too._
 
 _Note: You may use other pins if you like.  Just be sure to update
 `server/config/defaults.js` respectively._
