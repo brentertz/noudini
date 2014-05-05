@@ -1,0 +1,50 @@
+{
+  "name": "noudini-client",
+  "version": "0.0.1",
+  "description": "Arduino and node.js fun",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/noudini/noudini.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noudini/noudini/issues"
+  },
+  "homepage": "https://github.com/noudini/noudini",
+  "author": "Brent Ertz <brent.ertz@gmail.com> (http://brentertz.com/)",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "dependencies": {
+    "socket.io-client": "~0.9.16"
+  },
+  "devDependencies": {
+    "bower": "~1.3.3",
+    "grunt": "~0.4.4",
+    "grunt-cli": "~0.1.13",
+    "load-grunt-tasks": "~0.4.0",
+    "grunt-browserify": "~2.0.8",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-less": "~0.11.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "browserify-shim": "~3.4.1",
+    "partialify": "~3.1.1"
+  },
+  "browserify-shim": {
+    "angular": "angular"
+  },
+  "browserify": {
+    "transform": [
+      "partialify",
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "angular": "./bower_components/angular/angular.js",
+    "angular-socket-io": "./bower_components/angular-socket-io/socket.js"
+  }
+}

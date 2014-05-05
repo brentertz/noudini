@@ -1,0 +1,11 @@
+<!doctype html>
+<html ng-app="noudini">
+  <head>
+    <title>Noudini</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <led-toggle>
+    <script src="/assets/<%= env.production ? 'index.min.js' : 'index.js' %>"></script>
+  </body>
+</html>

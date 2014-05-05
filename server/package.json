@@ -1,0 +1,29 @@
+{
+  "name": "noudini-server",
+  "version": "0.0.1",
+  "description": "Arduino and node.js fun",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/noudini/noudini.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noudini/noudini/issues"
+  },
+  "homepage": "https://github.com/noudini/noudini",
+  "author": "Brent Ertz <brent.ertz@gmail.com> (http://brentertz.com/)",
+  "license": "MIT",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "start:debug": "nodemon --debug-brk app.js"
+  },
+  "dependencies": {
+    "express": "~4.1.0",
+    "morgan": "~1.0.0",
+    "socket.io": "~0.9.16",
+    "config": "~0.4.35",
+    "johnny-five": "~0.7.31"
+  },
+  "devDependencies": {}
+}
