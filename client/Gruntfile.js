@@ -40,6 +40,14 @@ module.exports = function(grunt) {
           return grunt.template.process(content);
         }
       }
+    },
+    fonts: {
+      files: [{
+        expand: true,
+        cwd: './bower_components/font-awesome/fonts',
+        src: '*',
+        dest: './build/assets/fonts'
+      }]
     }
   });
 
@@ -48,6 +56,9 @@ module.exports = function(grunt) {
       src: './src/styles.less',
       dest: './build/assets/styles.css',
       options: {
+        paths: [
+          './bower_components/font-awesome/less'
+        ],
         dumpLineNumbers: debug ? 'all' : false,
         sourceMap: debug,
         outputSourceFiles: debug,

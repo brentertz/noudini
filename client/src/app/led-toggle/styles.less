@@ -1,25 +1,30 @@
 .led-toggle {
-  background: #ccc;
-  transition: all 1s ease;
+  cursor: pointer;
   display: table;
   height: 100%;
   width: 100%;
 
-  &.on {
-    background: #ffffcc;
-    color: #ff9933;
-  }
-
-  &.off {
-    background: #333;
-  }
-
   .status {
+    background: #ccc;
+    color: #666;
+    font-size: 10vmin;
+    transition: all 1s ease;
     display: table-cell;
     vertical-align: middle;
-    font-size: 300px;
-    font-family: sans-serif;
     text-align: center;
-    text-transform: uppercase;
+
+    &.on, &.off {
+      font-size: 100vmin;
+    }
+
+    &.on {
+      background: #ffffcc;
+      color: #ff9933;
+    }
+
+    &.off {
+      background: #333;
+      color: #000;
+    }
   }
 }

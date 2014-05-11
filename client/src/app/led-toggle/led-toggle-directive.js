@@ -8,7 +8,7 @@ angular.module('noudini.ledToggle').directive('ledToggle', function(socket) {
     link: function(scope, element, attrs) {
       socket.forward('led:status', scope);
 
-      scope.status = '?';
+      scope.status = null;
 
       scope.toggle = function() {
         socket.emit('led:toggle');
