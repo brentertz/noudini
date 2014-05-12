@@ -10,14 +10,19 @@ module.exports = function(grunt) {
   grunt.config('clean', ['./build']);
 
   grunt.config('browserify', {
+    options: {
+      debug: debug,
+      watch: true
+    },
     app: {
-      files: {
-        './build/assets/index.js': ['./src/index.js']
-      },
-      options: {
-        debug: debug,
-        watch: true
-      }
+      files: [
+        { src: './src/index.js', dest: './build/assets/index.js' }
+      ]
+    },
+    test: {
+      files: [
+        { src: './test/unit/index.js', dest: 'build/test.js' }
+      ]
     }
   });
 
@@ -74,6 +79,20 @@ module.exports = function(grunt) {
     all: ['./Gruntfile.js', './src/**/*.js', './test/**/*.js']
   });
 
+  grunt.config('karma', {
+    options: {
+      configFile: './test/karma.conf.js'
+    },
+    run: {},
+    watch: {
+      options: {
+        browsers: ['PhantomJS'],
+        background: true,
+        singleRun: false
+      }
+    }
+  });
+
   grunt.config('watch', {
     html: {
       files: ['./src/index.html'],
@@ -86,10 +105,17 @@ module.exports = function(grunt) {
     jshint: {
       files: ['./Gruntfile.js', './src/**/*.js', './test/**/*.js'],
       tasks: ['jshint']
+    },
+    unitTest: {
+      files: ['./build/test.js'],
+      tasks: ['karma:watch:run']
     }
   });
 
-  grunt.registerTask('build', ['clean', 'jshint', 'browserify', 'uglify', 'copy', 'less']);
+  grunt.registerTask('test:unit', ['browserify:test', 'karma:run']);
+  grunt.registerTask('test', ['test:unit']);
+  grunt.registerTask('develop', ['build', 'browserify:test', 'karma:watch:start', 'watch']);
+  grunt.registerTask('build', ['clean', 'jshint', 'browserify:app', 'uglify', 'copy', 'less']);
 
   grunt.registerTask('default', ['build']);
 };

@@ -32,6 +32,7 @@ _Note: You may use other pins if you like.  Just be sure to update
 
 ## Server
 
+#### Install
 ```
 cd server
 npm install
@@ -40,13 +41,29 @@ npm start
 
 ## Client
 
+#### Install
+
 ```
 cd client
 npm install
 grunt build
 ```
 
-## Test drive
+#### Development
+
+The following command will start a task to watch for changes and subsequently rebuild and run tests.
+
+```
+grunt develop
+```
+
+#### Tests
+
+```
+grunt test
+```
+
+## That's all
 
 Open the app in a browser, or preferably in multiple browsers on multiple devices.
 
